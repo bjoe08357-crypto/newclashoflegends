@@ -34,8 +34,19 @@ const Header = () => {
             {/* Articles link hidden */}
           </nav>
 
-          {/* Language & CTA */}
+          {/* Socials + Language & CTA */}
           <div className="hidden md:flex items-center space-x-4">
+            <div className="hidden md:flex items-center space-x-3 mr-2">
+              <a href="https://www.instagram.com/clashoflegends.id/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <img src="/logos/instagram.avif" alt="Instagram" className="w-5 h-5 object-contain" />
+              </a>
+              <a href="https://x.com/ClashLegendsid" target="_blank" rel="noopener noreferrer" aria-label="X">
+                <img src="/logos/x.avif" alt="X" className="w-5 h-5 object-contain" />
+              </a>
+              <a href="https://www.tiktok.com/@clashoflegends.id" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                <img src="/logos/tiktok.avif" alt="TikTok" className="w-5 h-5 object-contain" />
+              </a>
+            </div>
             <div className="flex items-center space-x-2">
               <button onClick={() => setLanguage('en')} className={`px-3 py-1 rounded-full text-sm font-medium ${lang==='en' ? 'text-black bg-yellow-400' : 'text-white/70 bg-white/10'}`}>
                 EN
@@ -68,7 +79,11 @@ const Header = () => {
               <Link href="#about" className="text-white hover:text-yellow-400 transition-colors">{t('match.matchInfo')}</Link>
               <Link href="#players" className="text-white hover:text-yellow-400 transition-colors">Players</Link>
               <Link href="#tickets" className="text-white hover:text-yellow-400 transition-colors">{t('nav.tickets')}</Link>
-              <Link href="#articles" className="text-white hover:text-yellow-400 transition-colors">{t('nav.articles')}</Link>
+              <div className="flex items-center space-x-4 pt-2">
+                <a href="https://www.instagram.com/clashoflegends.id/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><img src="/logos/instagram.avif" alt="Instagram" className="w-5 h-5 object-contain" /></a>
+                <a href="https://x.com/ClashLegendsid" target="_blank" rel="noopener noreferrer" aria-label="X"><img src="/logos/x.avif" alt="X" className="w-5 h-5 object-contain" /></a>
+                <a href="https://www.tiktok.com/@clashoflegends.id" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><img src="/logos/tiktok.avif" alt="TikTok" className="w-5 h-5 object-contain" /></a>
+              </div>
               <a href="https://megatix.co.id/events/clash-of-legends" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-2 rounded-full font-semibold w-full mt-4">{t('header.getTickets')}</a>
             </nav>
           </div>
