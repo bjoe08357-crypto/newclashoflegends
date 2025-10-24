@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Footer = () => {
   const quickLinks = [
-    { name: "Buy Tickets", href: "#tickets" },
+    { name: "Buy Tickets", href: "https://megatix.co.id/events/clash-of-legends" },
     { name: "Seating Map", href: "#seating" }, 
     { name: "Articles", href: "#articles" },
     { name: "Venue Info", href: "#venue" },
@@ -104,9 +104,9 @@ const Footer = () => {
               <p className="text-white text-sm mb-4">
                 Secure your tickets now for the ultimate football experience!
               </p>
-              <button className="w-full bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold py-3 px-6 rounded-full hover:from-yellow-500 hover:to-orange-600 transition-all transform hover:scale-105">
+              <a href="https://megatix.co.id/events/clash-of-legends" target="_blank" rel="noopener noreferrer" className="w-full inline-block text-center bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold py-3 px-6 rounded-full hover:from-yellow-500 hover:to-orange-600 transition-all transform hover:scale-105">
                 🎫 Buy Tickets Now
-              </button>
+              </a>
             </div>
           </div>
         </div>

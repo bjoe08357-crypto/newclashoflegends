@@ -3,29 +3,21 @@
 import { useState, useEffect } from "react";
 
 const MatchInfoSection = () => {
-  const [timeLeft, setTimeLeft] = useState({
-    days: 31,
-    hours: 5,
-    minutes: 7,
-    seconds: 50
-  });
+  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft(prev => {
-        if (prev.seconds > 0) {
-          return { ...prev, seconds: prev.seconds - 1 };
-        } else if (prev.minutes > 0) {
-          return { ...prev, minutes: prev.minutes - 1, seconds: 59 };
-        } else if (prev.hours > 0) {
-          return { ...prev, hours: prev.hours - 1, minutes: 59, seconds: 59 };
-        } else if (prev.days > 0) {
-          return { ...prev, days: prev.days - 1, hours: 23, minutes: 59, seconds: 59 };
-        }
-        return prev;
-      });
-    }, 1000);
-
+    const target = new Date('2026-04-18T16:00:00+07:00').getTime();
+    function update() {
+      const now = Date.now();
+      const diff = Math.max(0, target - now);
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+      setTimeLeft({ days, hours, minutes, seconds });
+    }
+    update();
+    const timer = setInterval(update, 1000);
     return () => clearInterval(timer);
   }, []);
 
@@ -65,7 +57,7 @@ const MatchInfoSection = () => {
                   </div>
                   <div>
                     <h4 className="text-white font-bold text-lg">Date & Time</h4>
-                    <p className="text-orange-300 font-medium">📅 Saturday, 27 September 2025 — 4:00 PM</p>
+                    <p className="text-orange-300 font-medium">📅 Saturday, 18 April 2026 — 4:00 PM</p>
                   </div>
                 </div>
                 
