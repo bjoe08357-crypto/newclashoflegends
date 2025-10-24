@@ -59,29 +59,29 @@ const MatchInfoSection = () => {
                   </div>
                   <div>
                     <h4 className="text-white font-bold text-lg">{t('match.dateTime')}</h4>
-                    <p className="text-orange-300 font-medium">📅 Saturday, 18 April 2026 — 4:00 PM</p>
+                    <p className="text-orange-300 font-medium">{t('match.dateLine')}</p>
                   </div>
                 </div>
                 
                 {/* Countdown */}
                 <div className="bg-gradient-to-r from-red-600/30 to-orange-600/30 rounded-xl p-4">
-                  <p className="text-white text-sm mb-2">Match starts in</p>
+                  <p className="text-white text-sm mb-2">{t('match.startsIn')}</p>
                   <div className="grid grid-cols-4 gap-2 text-center">
                     <div>
                       <div className="text-2xl font-bold text-yellow-400">{timeLeft.days}</div>
-                      <div className="text-white/70 text-xs">DAYS</div>
+                      <div className="text-white/70 text-xs">{t('countdown.days')}</div>
                     </div>
                     <div>
                       <div className="text-2xl font-bold text-yellow-400">{timeLeft.hours}</div>
-                      <div className="text-white/70 text-xs">HOURS</div>
+                      <div className="text-white/70 text-xs">{t('countdown.hours')}</div>
                     </div>
                     <div>
                       <div className="text-2xl font-bold text-yellow-400">{timeLeft.minutes}</div>
-                      <div className="text-white/70 text-xs">MIN</div>
+                      <div className="text-white/70 text-xs">{t('countdown.minutes')}</div>
                     </div>
                     <div>
                       <div className="text-2xl font-bold text-yellow-400">{timeLeft.seconds}</div>
-                      <div className="text-white/70 text-xs">SEC</div>
+                      <div className="text-white/70 text-xs">{t('countdown.seconds')}</div>
                     </div>
                   </div>
                 </div>
@@ -112,16 +112,13 @@ const MatchInfoSection = () => {
               </div>
 
               <div className="mb-8">
-                <h4 className="text-yellow-400 font-bold text-lg mb-4">🔥 The Ultimate Rivalry Returns</h4>
-                <p className="text-white/90 mb-6 leading-relaxed">
-                  The ultimate rivalry returns to Jakarta! Real Madrid Legends take on Barca Legends 
-                  in front of 77,000 fans at Indonesia&apos;s biggest stadium!
-                </p>
+                <h4 className="text-yellow-400 font-bold text-lg mb-4">{t('match.ultimateTitle')}</h4>
+                <p className="text-white/90 mb-6 leading-relaxed">{t('match.ultimateDesc')}</p>
               </div>
 
               {/* Confirmed Players */}
               <div className="bg-gradient-to-br from-purple-900/30 to-blue-900/30 rounded-2xl p-6">
-                <h4 className="text-white font-bold text-lg mb-4">Confirmed Legendary Stars</h4>
+                <h4 className="text-white font-bold text-lg mb-4">{t('match.confirmed')}</h4>
                 <div className="grid grid-cols-2 gap-3 mb-4">
                   {confirmedPlayers.map((player, index) => (
                     <div
@@ -134,9 +131,7 @@ const MatchInfoSection = () => {
                 </div>
                 <p className="text-white/60 text-sm text-center mb-4">{t('match.moreSoon')}</p>
                 <div className="text-right">
-                  <span className="bg-gradient-to-r from-red-500 to-pink-500 text-white text-xs px-3 py-1 rounded-full">
-                    10th Historic Meeting
-                  </span>
+                  <span className="bg-gradient-to-r from-red-500 to-pink-500 text-white text-xs px-3 py-1 rounded-full">{t('match.historicBadge')}</span>
                 </div>
               </div>
             </div>
