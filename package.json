@@ -9,7 +9,8 @@
     "build": "next build",
     "prestart": "sh -c 'lsof -ti tcp:3080 | xargs -r kill -9 || true'",
     "start": "HOSTNAME=127.0.0.1 node -r ./scripts/os-network-fallback.cjs ./node_modules/next/dist/bin/next start -p 3080 -H 127.0.0.1",
-    "lint": "eslint"
+    "lint": "eslint",
+    "copy:logos": "node ./scripts/copy-logos.mjs"
   },
   "dependencies": {
     "react": "19.1.0",
