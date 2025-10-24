@@ -105,10 +105,14 @@ const Footer = () => {
 
         {/* Bottom Section */}
         <div className="border-t border-white/10 mt-16 pt-8">
-          <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0">
-            <p className="text-white/60 text-sm text-center">
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            <p className="text-white/60 text-sm text-center md:text-left">
               © 2025 Clash Of Legends. All rights reserved.
             </p>
+            <a href="https://drxtoken.com" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 mt-4 md:mt-0 text-white/70 hover:text-white transition-colors">
+              <img src="/logos/drx.avif" alt="DRX" className="w-6 h-6 object-contain" />
+              <span className="text-sm">Powered by DRX</span>
+            </a>
           </div>
         </div>
       </div>
