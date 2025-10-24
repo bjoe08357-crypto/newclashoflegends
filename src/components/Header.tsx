@@ -1,10 +1,12 @@
 "use client";
 
 import { useState } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 import Link from "next/link";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { lang, setLanguage, t } = useLanguage();
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-white/10">
@@ -23,35 +25,31 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <Link href="#home" className="text-white hover:text-yellow-400 transition-colors font-medium">
-              Home
+              {t('Home','Beranda')}
             </Link>
             <Link href="#tickets" className="text-white hover:text-yellow-400 transition-colors font-medium">
-              Tickets
-            </Link>
-            <Link href="#seating" className="text-white hover:text-yellow-400 transition-colors font-medium">
-              Seating
+              {t('Tickets','Tiket')}
             </Link>
             <Link href="#articles" className="text-white hover:text-yellow-400 transition-colors font-medium">
-              Articles
+              {t('Articles','Artikel')}
             </Link>
             <Link href="#partners" className="text-white hover:text-yellow-400 transition-colors font-medium">
-              Partners
+              {t('Partners','Mitra')}
             </Link>
           </nav>
 
           {/* Language & CTA */}
           <div className="hidden md:flex items-center space-x-4">
             <div className="flex items-center space-x-2">
-              <button className="text-white bg-white/10 px-3 py-1 rounded-full text-sm font-medium">
+              <button onClick={() => setLanguage('en')} className={`px-3 py-1 rounded-full text-sm font-medium ${lang==='en' ? 'text-black bg-yellow-400' : 'text-white/70 bg-white/10'}`}>
                 EN
               </button>
-              <div className="w-6 h-6 bg-white rounded-full"></div>
-              <button className="text-white/70 px-3 py-1 rounded-full text-sm">
+              <button onClick={() => setLanguage('id')} className={`px-3 py-1 rounded-full text-sm font-medium ${lang==='id' ? 'text-black bg-yellow-400' : 'text-white/70 bg-white/10'}`}>
                 ID
               </button>
             </div>
             <a href="https://megatix.co.id/events/clash-of-legends" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-2 rounded-full font-semibold hover:from-yellow-500 hover:to-orange-600 transition-all transform hover:scale-105">
-              Get Your Tickets
+              {t('Get Your Tickets','Beli Tiket')}
             </a>
           </div>
 
@@ -70,24 +68,11 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden mt-4 pb-4 border-t border-white/10">
             <nav className="flex flex-col space-y-4 pt-4">
-              <Link href="#home" className="text-white hover:text-yellow-400 transition-colors">
-                Home
-              </Link>
-              <Link href="#tickets" className="text-white hover:text-yellow-400 transition-colors">
-                Tickets
-              </Link>
-              <Link href="#seating" className="text-white hover:text-yellow-400 transition-colors">
-                Seating
-              </Link>
-              <Link href="#articles" className="text-white hover:text-yellow-400 transition-colors">
-                Articles
-              </Link>
-              <Link href="#partners" className="text-white hover:text-yellow-400 transition-colors">
-                Partners
-              </Link>
-              <a href="https://megatix.co.id/events/clash-of-legends" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-2 rounded-full font-semibold w-full mt-4">
-                Get Your Tickets
-              </a>
+              <Link href="#home" className="text-white hover:text-yellow-400 transition-colors">{t('Home','Beranda')}</Link>
+              <Link href="#tickets" className="text-white hover:text-yellow-400 transition-colors">{t('Tickets','Tiket')}</Link>
+              <Link href="#articles" className="text-white hover:text-yellow-400 transition-colors">{t('Articles','Artikel')}</Link>
+              <Link href="#partners" className="text-white hover:text-yellow-400 transition-colors">{t('Partners','Mitra')}</Link>
+              <a href="https://megatix.co.id/events/clash-of-legends" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-2 rounded-full font-semibold w-full mt-4">{t('Get Your Tickets','Beli Tiket')}</a>
             </nav>
           </div>
         )}

@@ -1,4 +1,7 @@
+import { useLanguage } from "@/contexts/LanguageContext";
+
 const ArticlesSection = () => {
+  const { t } = useLanguage();
   const articles = [
     {
       id: 1,
@@ -62,11 +65,11 @@ const ArticlesSection = () => {
         {/* Title */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            LATEST ARTICLES
+            {t('articles.latest')}
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-orange-500 mx-auto mb-6"></div>
           <p className="text-xl text-white/80 max-w-2xl mx-auto">
-            Stay updated with the latest news and insights
+            {t('articles.stayUpdated')}
           </p>
         </div>
 
@@ -116,7 +119,7 @@ const ArticlesSection = () => {
                   {/* Read More & Views */}
                   <div className="flex items-center justify-between">
                     <button className="text-yellow-400 hover:text-yellow-300 font-semibold text-sm flex items-center space-x-1 transition-colors">
-                      <span>Read More</span>
+                      <span>{t('articles.readMore')}</span>
                       <span>→</span>
                     </button>
                     <div className="flex items-center text-white/50 text-sm">
@@ -133,7 +136,7 @@ const ArticlesSection = () => {
         {/* View More Button */}
         <div className="text-center mt-12">
           <a href="#articles" className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold px-8 py-4 rounded-full hover:from-yellow-500 hover:to-orange-600 transition-all transform hover:scale-105">
-            View All Articles
+            {t('articles.viewAll')}
           </a>
         </div>
       </div>

@@ -1,18 +1,16 @@
 import Link from "next/link";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Footer = () => {
+  const { t } = useLanguage();
   const quickLinks = [
-    { name: "Buy Tickets", href: "https://megatix.co.id/events/clash-of-legends" },
-    { name: "Seating Map", href: "#seating" }, 
-    { name: "Articles", href: "#articles" },
-    { name: "Venue Info", href: "#venue" },
-    { name: "FAQ", href: "#faq" }
+    { name: t("footer.buyTicketsNow"), href: "https://megatix.co.id/events/clash-of-legends" },
+    { name: t("nav.articles"), href: "#articles" }
   ];
 
   const socialLinks = [
-    { name: "Instagram", icon: "📷", href: "#" },
-    { name: "TikTok", icon: "🎵", href: "#" },
-    { name: "Twitter", icon: "🐦", href: "#" }
+    { name: "Instagram", icon: "/logos/instagram.svg", href: "#" },
+    { name: "TikTok", icon: "/logos/tiktok.svg", href: "#" }
   ];
 
   return (
@@ -35,15 +33,16 @@ const Footer = () => {
             
             {/* Social Links */}
             <div>
-              <h4 className="text-white font-semibold mb-4">Follow Us</h4>
+              <h4 className="text-white font-semibold mb-4">{t('footer.followUs')}</h4>
               <div className="flex space-x-4">
                 {socialLinks.map((social, index) => (
                   <a
                     key={index}
                     href={social.href}
+                    aria-label={social.name}
                     className="w-12 h-12 bg-gradient-to-br from-yellow-600/20 to-orange-600/20 rounded-full flex items-center justify-center hover:from-yellow-400 hover:to-orange-500 transition-all transform hover:scale-110"
                   >
-                    <span className="text-xl">{social.icon}</span>
+                    <img src={social.icon} alt={social.name} className="w-6 h-6" />
                   </a>
                 ))}
               </div>
@@ -52,7 +51,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-white font-semibold text-lg mb-6">Quick Links</h4>
+            <h4 className="text-white font-semibold text-lg mb-6">{t('footer.quickLinks')}</h4>
             <nav className="space-y-4">
               {quickLinks.map((link, index) => (
                 <Link
@@ -73,7 +72,7 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <span className="text-yellow-400 text-lg">📧</span>
                 <div>
-                  <p className="text-white/70 text-sm">Email</p>
+                  <p className="text-white/70 text-sm">{t('footer.email')}</p>
                   <a 
                     href="mailto:tickets@clashoflegends.com"
                     className="text-yellow-400 hover:text-yellow-300 transition-colors"
@@ -85,7 +84,7 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <span className="text-yellow-400 text-lg">📞</span>
                 <div>
-                  <p className="text-white/70 text-sm">Phone</p>
+                  <p className="text-white/70 text-sm">{t('footer.phone')}</p>
                   <a 
                     href="tel:+34912345678"
                     className="text-yellow-400 hover:text-yellow-300 transition-colors"
@@ -99,13 +98,13 @@ const Footer = () => {
 
           {/* CTA Section */}
           <div>
-            <h4 className="text-white font-semibold text-lg mb-6">Don&apos;t Miss Out</h4>
+            <h4 className="text-white font-semibold text-lg mb-6">{t('footer.dontMissOut')}</h4>
             <div className="bg-gradient-to-br from-yellow-600/20 to-orange-600/20 rounded-2xl p-6 border border-yellow-500/30">
               <p className="text-white text-sm mb-4">
                 Secure your tickets now for the ultimate football experience!
               </p>
               <a href="https://megatix.co.id/events/clash-of-legends" target="_blank" rel="noopener noreferrer" className="w-full inline-block text-center bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold py-3 px-6 rounded-full hover:from-yellow-500 hover:to-orange-600 transition-all transform hover:scale-105">
-                🎫 Buy Tickets Now
+                🎫 {t('footer.buyTicketsNow')}
               </a>
             </div>
           </div>

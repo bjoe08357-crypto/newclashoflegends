@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const TicketsSection = () => {
   const ticketTypes = [
@@ -32,63 +33,26 @@ const TicketsSection = () => {
     }
   ];
 
+  const { t } = useLanguage();
   return (
     <section id="tickets" className="py-20 px-4">
       <div className="container mx-auto">
         {/* Title */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-bold text-yellow-400 mb-4">
-            GRAB YOUR
+            {t('tickets.grabYour')}
           </h2>
           <h2 className="text-4xl md:text-6xl font-bold text-white">
-            TICKETS
+            {t('tickets.tickets')}
           </h2>
         </div>
 
-        {/* Seating Map */}
-        <div className="max-w-4xl mx-auto mb-16">
-          <div className="bg-gradient-to-br from-slate-800/50 to-blue-900/30 backdrop-blur-md border border-yellow-500/30 rounded-3xl p-8">
-            <h3 className="text-2xl md:text-3xl font-bold text-white text-center mb-8">
-              Seating Map
-            </h3>
-            
-            {/* Stadium Visualization */}
-            <div className="relative max-w-2xl mx-auto">
-              <Image
-                src="/images/GBK.png"
-                alt="Gelora Bung Karno Stadium Seating Map"
-                width={800}
-                height={600}
-                className="w-full h-auto rounded-lg"
-              />
-            </div>
-
-            {/* Legend */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
-              <div className="flex items-center space-x-3">
-                <div className="w-6 h-6 bg-purple-600 rounded"></div>
-                <span className="text-white text-sm">VIP Barat & Timur</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-6 h-6 bg-green-600 rounded"></div>
-                <span className="text-white text-sm">CAT-1</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-6 h-6 bg-blue-600 rounded"></div>
-                <span className="text-white text-sm">CAT-2</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-6 h-6 bg-orange-600 rounded"></div>
-                <span className="text-white text-sm">CAT-3</span>
-              </div>
-            </div>
-          </div>
-        </div>
+        {/* Seating map removed per request */}
 
         {/* Tickets Pricing */}
         <div className="mb-12">
           <h3 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-            Our Tickets
+            {t('tickets.ourTickets')}
           </h3>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
@@ -103,9 +67,9 @@ const TicketsSection = () => {
                 <div className="text-4xl font-bold text-white mb-2">
                   {ticket.price}
                 </div>
-                <p className="text-white/80 text-sm mb-6">*exclude tax</p>
+                <p className="text-white/80 text-sm mb-6">{t('tickets.excludeTax')}</p>
                 <a href="https://megatix.co.id/events/clash-of-legends" target="_blank" rel="noopener noreferrer" className={`w-full inline-block text-center ${ticket.buttonColor} text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105`}>
-                  Get Your Tickets
+                  {t('header.getTickets')}
                 </a>
               </div>
             ))}
@@ -120,7 +84,7 @@ const TicketsSection = () => {
             rel="noopener noreferrer"
             className="text-yellow-400 hover:text-yellow-300 underline transition-colors"
           >
-            Terms & Conditions
+            {t('tickets.terms')}
           </a>
         </div>
       </div>

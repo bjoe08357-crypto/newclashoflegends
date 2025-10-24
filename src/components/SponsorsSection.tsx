@@ -1,5 +1,6 @@
 import Image from "next/image";
 import logos from "@/data/logos.json";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const LogoRow = ({ items, size = 64, max }: { items: string[]; size?: number; max?: number }) => {
   const sources = typeof max === "number" ? items.slice(0, max) : items;
@@ -15,33 +16,34 @@ const LogoRow = ({ items, size = 64, max }: { items: string[]; size?: number; ma
 };
 
 const SponsorsSection = () => {
+  const { t } = useLanguage();
   return (
     <section id="partners" className="py-12 bg-gradient-to-b from-slate-900 to-blue-900">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="mb-8">
-            <p className="text-center text-white/60 text-sm mb-4">Organized by</p>
+            <p className="text-center text-white/60 text-sm mb-4">{t('sponsors.organizedBy')}</p>
             <LogoRow items={logos.organizedBy} size={64} max={4} />
           </div>
 
           <div className="mb-8">
-            <p className="text-center text-white/60 text-sm mb-4">Sponsored by</p>
+            <p className="text-center text-white/60 text-sm mb-4">{t('sponsors.sponsoredBy')}</p>
             <LogoRow items={logos.sponsoredBy} size={72} />
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             <div>
-              <p className="text-center text-white/60 text-sm mb-4">Community Partner</p>
+              <p className="text-center text-white/60 text-sm mb-4">{t('sponsors.communityPartner')}</p>
               <LogoRow items={logos.communityPartner} size={48} />
             </div>
             
             <div>
-              <p className="text-center text-white/60 text-sm mb-4">Supporting Partner</p>
+              <p className="text-center text-white/60 text-sm mb-4">{t('sponsors.supportingPartner')}</p>
               <LogoRow items={logos.supportingPartner} size={48} />
             </div>
             
             <div>
-              <p className="text-center text-white/60 text-sm mb-4">Ticketing Partner</p>
+              <p className="text-center text-white/60 text-sm mb-4">{t('sponsors.ticketingPartner')}</p>
               <LogoRow items={logos.ticketingPartner} size={56} />
             </div>
           </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const MatchInfoSection = () => {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
@@ -30,6 +31,7 @@ const MatchInfoSection = () => {
     "Pepe"
   ];
 
+  const { t } = useLanguage();
   return (
     <section className="py-20 px-4">
       <div className="container mx-auto">
@@ -37,7 +39,7 @@ const MatchInfoSection = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-bold text-yellow-400 mb-4 flex items-center justify-center space-x-4">
             <span>⚽</span>
-            <span>CLASH OF LEGENDS</span>
+            <span>{t('match.title')}</span>
             <span>⚽</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-orange-500 mx-auto"></div>
@@ -47,7 +49,7 @@ const MatchInfoSection = () => {
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Match Info Card */}
             <div className="bg-gradient-to-br from-blue-900/40 to-slate-900/40 backdrop-blur-md border border-yellow-500/30 rounded-3xl p-8">
-              <h3 className="text-2xl font-bold text-white mb-8 text-center">Match Info</h3>
+              <h3 className="text-2xl font-bold text-white mb-8 text-center">{t('match.matchInfo')}</h3>
               
               {/* Date & Time */}
               <div className="bg-gradient-to-r from-orange-600/20 to-red-600/20 rounded-2xl p-6 mb-6">
@@ -56,7 +58,7 @@ const MatchInfoSection = () => {
                     <span className="text-white text-xl">📅</span>
                   </div>
                   <div>
-                    <h4 className="text-white font-bold text-lg">Date & Time</h4>
+                    <h4 className="text-white font-bold text-lg">{t('match.dateTime')}</h4>
                     <p className="text-orange-300 font-medium">📅 Saturday, 18 April 2026 — 4:00 PM</p>
                   </div>
                 </div>
@@ -134,7 +136,7 @@ const MatchInfoSection = () => {
                     </div>
                   ))}
                 </div>
-                <p className="text-white/60 text-sm text-center mb-4">More legends to be revealed soon!</p>
+                  <p className="text-white/60 text-sm text-center mb-4">{t('articles.stayUpdated')}</p>
                 <div className="text-right">
                   <span className="bg-gradient-to-r from-red-500 to-pink-500 text-white text-xs px-3 py-1 rounded-full">
                     10th Historic Meeting
@@ -147,11 +149,9 @@ const MatchInfoSection = () => {
           {/* CTA Button */}
           <div className="text-center mt-12">
             <div className="bg-gradient-to-r from-yellow-600/20 to-orange-600/20 rounded-2xl p-6 max-w-2xl mx-auto">
-              <p className="text-yellow-400 font-bold text-lg mb-4">
-                ⚠️ Don&apos;t miss your chance to witness football history live!
-              </p>
+              <p className="text-yellow-400 font-bold text-lg mb-4">⚠️ {t('match.dontMiss')}</p>
               <a href="https://megatix.co.id/events/clash-of-legends" target="_blank" rel="noopener noreferrer" className="inline-block bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold px-8 py-4 rounded-full text-lg hover:from-yellow-500 hover:to-orange-600 transition-all transform hover:scale-105 shadow-2xl">
-                👑 Secure Your Legendary Experience
+                👑 {t('match.secureCta')}
               </a>
             </div>
           </div>
