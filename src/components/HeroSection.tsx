@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="relative h-[75vh] md:h-[85vh] flex items-center justify-center overflow-hidden mt-15 bg-gradient-to-b from-slate-900 to-blue-900">
+    <section id="home" className="relative h-screen md:h-[85vh] flex items-center justify-center overflow-hidden mt-15 bg-gradient-to-b from-slate-900 to-blue-900">
       {/* Hero Background Images - Desktop and Mobile */}
       <div className="absolute inset-0 top-0">
         {/* Desktop Image */}
@@ -18,7 +18,7 @@ const HeroSection = () => {
           src="/images/hero-mobile.jpeg"
           alt="Clash of Legends banner"
           fill
-          className="object-contain object-center block md:hidden"
+          className="object-cover object-center block md:hidden"
           priority
         />
       </div>
