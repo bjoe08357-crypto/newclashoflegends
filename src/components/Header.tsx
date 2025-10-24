@@ -14,7 +14,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo (click to home) */}
           <Link href="#home" className="flex items-center">
-            <img src="/logo.avif" alt="Clash Of Legends" className="w-10 h-10 object-contain" />
+            <img src="/logo.avif" alt="Clash Of Legends" className="w-14 h-14 object-contain" />
           </Link>
 
           {/* Desktop Navigation */}

@@ -10,8 +10,9 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { name: "Instagram", icon: "/logos/instagram.svg", href: "#" },
-    { name: "TikTok", icon: "/logos/tiktok.svg", href: "#" }
+    { name: "Instagram", icon: "/logos/instagram.avif", href: "https://www.instagram.com/clashoflegends.id/" },
+    { name: "X", icon: "/logos/x.avif", href: "https://x.com/ClashLegendsid" },
+    { name: "TikTok", icon: "/logos/tiktok.avif", href: "https://www.tiktok.com/@clashoflegends.id" }
   ];
 
   return (
@@ -43,7 +44,7 @@ const Footer = () => {
                     aria-label={social.name}
                     className="w-12 h-12 bg-gradient-to-br from-yellow-600/20 to-orange-600/20 rounded-full flex items-center justify-center hover:from-yellow-400 hover:to-orange-500 transition-all transform hover:scale-110"
                   >
-                    <img src={social.icon} alt={social.name} className="w-6 h-6" />
+                    <img src={social.icon} alt={social.name} className="w-6 h-6 object-contain" />
                   </a>
                 ))}
               </div>
