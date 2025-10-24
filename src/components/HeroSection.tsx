@@ -7,16 +7,16 @@ const HeroSection = () => {
       <div className="absolute inset-0 top-0">
         {/* Desktop Image */}
         <Image
-          src="/images/heropc.jpg"
-          alt="Clash of Legends - Real Madrid vs Barcelona"
+          src="/images/hero.jpeg"
+          alt="Clash of Legends banner"
           fill
           className="object-cover object-top hidden md:block"
           priority
         />
         {/* Mobile Image */}
         <Image
-          src="/images/heromob.jpg"
-          alt="Clash of Legends - Real Madrid vs Barcelona"
+          src="/images/hero.jpeg"
+          alt="Clash of Legends banner"
           fill
           className="object-cover object-[center_20%] block md:hidden"
           priority

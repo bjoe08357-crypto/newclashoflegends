@@ -31,9 +31,7 @@ const Header = () => {
             <Link href="#tickets" className="text-white hover:text-yellow-400 transition-colors font-medium">
               {t('nav.tickets')}
             </Link>
-            <Link href="#articles" className="text-white hover:text-yellow-400 transition-colors font-medium">
-              {t('nav.articles')}
-            </Link>
+            {/* Articles link hidden */}
           </nav>
 
           {/* Language & CTA */}

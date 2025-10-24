@@ -5,8 +5,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 const Footer = () => {
   const { t } = useLanguage();
   const quickLinks = [
-    { name: t("footer.buyTicketsNow"), href: "https://megatix.co.id/events/clash-of-legends" },
-    { name: t("nav.articles"), href: "#articles" }
+    { name: t("footer.buyTicketsNow"), href: "https://megatix.co.id/events/clash-of-legends" }
   ];
 
   const socialLinks = [

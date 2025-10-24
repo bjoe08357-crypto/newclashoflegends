@@ -4,7 +4,7 @@ import SponsorsSection from "@/components/SponsorsSection";
 import TicketsSection from "@/components/TicketsSection";
 import MatchInfoSection from "@/components/MatchInfoSection";
 import LegendaryPlayersSection from "@/components/LegendaryPlayersSection";
-import ArticlesSection from "@/components/ArticlesSection";
+// import ArticlesSection from "@/components/ArticlesSection";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -17,7 +17,7 @@ export default function Home() {
         <TicketsSection />
         <MatchInfoSection />
         <LegendaryPlayersSection />
-        <ArticlesSection />
+        {/* <ArticlesSection /> */}
       </main>
       <Footer />
     </div>
