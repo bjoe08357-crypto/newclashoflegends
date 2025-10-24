@@ -5,7 +5,6 @@ import Image from "next/image";
 
 const LegendaryPlayersSection = () => {
   const [selectedTeam, setSelectedTeam] = useState<'real' | 'barca'>('real');
-  const [currentSlide, setCurrentSlide] = useState(0);
 
   const realMadridPlayers = [
     { name: "PEPÉ", position: "Defender", image: "/images/pepe.png", team: "Real Madrid" },
@@ -18,32 +17,6 @@ const LegendaryPlayersSection = () => {
   ];
 
   const currentPlayers = selectedTeam === 'real' ? realMadridPlayers : barcelonaPlayers;
-
-  // Auto-rotate carousel
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % currentPlayers.length);
-    }, 4000);
-
-    return () => clearInterval(interval);
-  }, [currentPlayers.length]);
-
-  // Reset slide when team changes
-  useEffect(() => {
-    setCurrentSlide(0);
-  }, [selectedTeam]);
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % currentPlayers.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + currentPlayers.length) % currentPlayers.length);
-  };
-
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-  };
 
   return (
     <section className="py-20 px-4 bg-gradient-to-b from-slate-900 to-blue-900">
@@ -60,11 +33,11 @@ const LegendaryPlayersSection = () => {
           </p>
         </div>
 
-        {/* Player Cards Carousel */}
-        <div className="max-w-7xl mx-auto relative mb-12">
-          <div className="flex space-x-6 overflow-x-auto pb-4">
+        {/* Player Cards Grid (centered) */}
+        <div className="max-w-7xl mx-auto mb-12">
+          <div className="flex flex-wrap justify-center gap-6">
             {/* Pepé Card */}
-            <div className="flex-shrink-0 w-64 group relative">
+            <div className="w-64 group relative">
               <div className="rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 shadow-2xl">
                 <div className="relative w-64 h-[436px]">
                   <Image
@@ -78,7 +51,7 @@ const LegendaryPlayersSection = () => {
             </div>
 
             {/* Puyol Card - Featured */}
-            <div className="flex-shrink-0 w-64 group relative">
+            <div className="w-64 group relative">
               <div className="rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 shadow-2xl">
                 <div className="relative w-64 h-[436px]">
                   <Image
@@ -92,7 +65,7 @@ const LegendaryPlayersSection = () => {
             </div>
 
             {/* Milla Card */}
-            <div className="flex-shrink-0 w-64 group relative">
+            <div className="w-64 group relative">
               <div className="rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 shadow-2xl">
                 <div className="relative w-64 h-[436px]">
                   <Image
@@ -106,7 +79,7 @@ const LegendaryPlayersSection = () => {
             </div>
 
             {/* Xavi Card */}
-            <div className="flex-shrink-0 w-64 group relative">
+            <div className="w-64 group relative">
               <div className="rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 shadow-2xl">
                 <div className="relative w-64 h-[436px]">
                   <Image
@@ -120,24 +93,7 @@ const LegendaryPlayersSection = () => {
             </div>
           </div>
 
-          {/* Navigation Arrows */}
-          <button 
-            onClick={prevSlide}
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-md rounded-full p-3 text-black hover:bg-white transition-all duration-300 hover:scale-110 shadow-xl z-10"
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
-          
-          <button 
-            onClick={nextSlide}
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-md rounded-full p-3 text-black hover:bg-white transition-all duration-300 hover:scale-110 shadow-xl z-10"
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
+          {/* Navigation Arrows removed */}
         </div>
 
         {/* Team Selector */}

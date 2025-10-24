@@ -3,9 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "predev": "sh -c 'lsof -ti tcp:3080 | xargs -r kill -9 || true'",
+    "dev": "CHOKIDAR_USEPOLLING=1 WATCHPACK_POLLING=true HOSTNAME=127.0.0.1 node -r ./scripts/os-network-fallback.cjs ./node_modules/next/dist/bin/next dev -p 3080 -H 127.0.0.1",
+    "dev:3080": "npm run dev",
     "build": "next build",
-    "start": "next start",
+    "prestart": "sh -c 'lsof -ti tcp:3080 | xargs -r kill -9 || true'",
+    "start": "HOSTNAME=127.0.0.1 node -r ./scripts/os-network-fallback.cjs ./node_modules/next/dist/bin/next start -p 3080 -H 127.0.0.1",
     "lint": "eslint"
   },
   "dependencies": {
