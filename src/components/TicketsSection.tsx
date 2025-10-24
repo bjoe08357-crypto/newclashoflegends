@@ -1,4 +1,4 @@
-import Image from "next/image";
+// Image import removed; seating map removed
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const TicketsSection = () => {

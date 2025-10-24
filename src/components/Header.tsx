@@ -25,16 +25,16 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <Link href="#home" className="text-white hover:text-yellow-400 transition-colors font-medium">
-              {t('Home','Beranda')}
+              {t('nav.home')}
             </Link>
             <Link href="#tickets" className="text-white hover:text-yellow-400 transition-colors font-medium">
-              {t('Tickets','Tiket')}
+              {t('nav.tickets')}
             </Link>
             <Link href="#articles" className="text-white hover:text-yellow-400 transition-colors font-medium">
-              {t('Articles','Artikel')}
+              {t('nav.articles')}
             </Link>
             <Link href="#partners" className="text-white hover:text-yellow-400 transition-colors font-medium">
-              {t('Partners','Mitra')}
+              {t('nav.partners')}
             </Link>
           </nav>
 
@@ -49,7 +49,7 @@ const Header = () => {
               </button>
             </div>
             <a href="https://megatix.co.id/events/clash-of-legends" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-2 rounded-full font-semibold hover:from-yellow-500 hover:to-orange-600 transition-all transform hover:scale-105">
-              {t('Get Your Tickets','Beli Tiket')}
+              {t('header.getTickets')}
             </a>
           </div>
 
@@ -68,11 +68,11 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden mt-4 pb-4 border-t border-white/10">
             <nav className="flex flex-col space-y-4 pt-4">
-              <Link href="#home" className="text-white hover:text-yellow-400 transition-colors">{t('Home','Beranda')}</Link>
-              <Link href="#tickets" className="text-white hover:text-yellow-400 transition-colors">{t('Tickets','Tiket')}</Link>
-              <Link href="#articles" className="text-white hover:text-yellow-400 transition-colors">{t('Articles','Artikel')}</Link>
-              <Link href="#partners" className="text-white hover:text-yellow-400 transition-colors">{t('Partners','Mitra')}</Link>
-              <a href="https://megatix.co.id/events/clash-of-legends" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-2 rounded-full font-semibold w-full mt-4">{t('Get Your Tickets','Beli Tiket')}</a>
+              <Link href="#home" className="text-white hover:text-yellow-400 transition-colors">{t('nav.home')}</Link>
+              <Link href="#tickets" className="text-white hover:text-yellow-400 transition-colors">{t('nav.tickets')}</Link>
+              <Link href="#articles" className="text-white hover:text-yellow-400 transition-colors">{t('nav.articles')}</Link>
+              <Link href="#partners" className="text-white hover:text-yellow-400 transition-colors">{t('nav.partners')}</Link>
+              <a href="https://megatix.co.id/events/clash-of-legends" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-2 rounded-full font-semibold w-full mt-4">{t('header.getTickets')}</a>
             </nav>
           </div>
         )}
