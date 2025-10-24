@@ -19,7 +19,7 @@ const LegendaryPlayersSection = () => {
   const currentPlayers = selectedTeam === 'real' ? realMadridPlayers : barcelonaPlayers;
 
   return (
-    <section className="py-20 px-4 bg-gradient-to-b from-slate-900 to-blue-900">
+    <section id="players" className="py-20 px-4 bg-gradient-to-b from-slate-900 to-blue-900">
       <div className="container mx-auto">
 
         {/* Title */}
@@ -96,34 +96,7 @@ const LegendaryPlayersSection = () => {
           {/* Navigation Arrows removed */}
         </div>
 
-        {/* Team Selector */}
-        <div className="flex justify-center mb-8">
-          <div className="bg-slate-800/50 rounded-full p-2 flex items-center space-x-4">
-            <button
-              onClick={() => setSelectedTeam('real')}
-              className={`px-6 py-3 rounded-full font-semibold transition-all ${
-                selectedTeam === 'real'
-                  ? 'bg-white text-black'
-                  : 'text-white hover:bg-white/10'
-              }`}
-            >
-              <span className="mr-2">⚪</span>
-              Real Madrid Legends
-            </button>
-            <div className="text-white font-bold text-xl">VS</div>
-            <button
-              onClick={() => setSelectedTeam('barca')}
-              className={`px-6 py-3 rounded-full font-semibold transition-all ${
-                selectedTeam === 'barca'
-                  ? 'bg-gradient-to-r from-red-600 to-blue-600 text-white'
-                  : 'text-white hover:bg-white/10'
-              }`}
-            >
-              <span className="mr-2">🔴</span>
-              Barcelona Legends
-            </button>
-          </div>
-        </div>
+        {/* Team selector removed per request */}
       </div>
     </section>
   );

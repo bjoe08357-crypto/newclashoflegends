@@ -12,29 +12,27 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-white/10">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center">
-              <span className="text-black font-bold text-sm">⚽</span>
-            </div>
-            <h1 className="text-white font-bold text-xl tracking-wider">
-              CLASH OF LEGENDS
-            </h1>
-          </div>
+          {/* Logo (click to home) */}
+          <Link href="#home" className="flex items-center">
+            <img src="/logo.avif" alt="Clash Of Legends" className="w-10 h-10 object-contain" />
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link href="#home" className="text-white hover:text-yellow-400 transition-colors font-medium">
-              {t('nav.home')}
+            <Link href="#partners" className="text-white hover:text-yellow-400 transition-colors font-medium">
+              {t('nav.partners')}
+            </Link>
+            <Link href="#about" className="text-white hover:text-yellow-400 transition-colors font-medium">
+              {t('match.matchInfo')}
+            </Link>
+            <Link href="#players" className="text-white hover:text-yellow-400 transition-colors font-medium">
+              Players
             </Link>
             <Link href="#tickets" className="text-white hover:text-yellow-400 transition-colors font-medium">
               {t('nav.tickets')}
             </Link>
             <Link href="#articles" className="text-white hover:text-yellow-400 transition-colors font-medium">
               {t('nav.articles')}
-            </Link>
-            <Link href="#partners" className="text-white hover:text-yellow-400 transition-colors font-medium">
-              {t('nav.partners')}
             </Link>
           </nav>
 
@@ -68,10 +66,11 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden mt-4 pb-4 border-t border-white/10">
             <nav className="flex flex-col space-y-4 pt-4">
-              <Link href="#home" className="text-white hover:text-yellow-400 transition-colors">{t('nav.home')}</Link>
+              <Link href="#partners" className="text-white hover:text-yellow-400 transition-colors">{t('nav.partners')}</Link>
+              <Link href="#about" className="text-white hover:text-yellow-400 transition-colors">{t('match.matchInfo')}</Link>
+              <Link href="#players" className="text-white hover:text-yellow-400 transition-colors">Players</Link>
               <Link href="#tickets" className="text-white hover:text-yellow-400 transition-colors">{t('nav.tickets')}</Link>
               <Link href="#articles" className="text-white hover:text-yellow-400 transition-colors">{t('nav.articles')}</Link>
-              <Link href="#partners" className="text-white hover:text-yellow-400 transition-colors">{t('nav.partners')}</Link>
               <a href="https://megatix.co.id/events/clash-of-legends" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-2 rounded-full font-semibold w-full mt-4">{t('header.getTickets')}</a>
             </nav>
           </div>

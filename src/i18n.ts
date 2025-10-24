@@ -24,6 +24,10 @@ const en: Dictionary = {
   "match.dateTime": "Date & Time",
   "match.dontMiss": "Don't miss your chance to witness football history live!",
   "match.secureCta": "Secure Your Legendary Experience",
+  "match.venue": "Venue",
+  "match.venueDesc": "Indonesia's largest stadium, seating 77,000 fans, and home to unforgettable moments. From the Asian Games to world-class concerts, it now sets the stage for the ultimate football legends clash.",
+  "match.highlights": "Event Highlights",
+  "match.moreSoon": "More legends to be revealed soon!",
 
   "articles.latest": "LATEST ARTICLES",
   "articles.stayUpdated": "Stay updated with the latest news and insights",
@@ -64,6 +68,10 @@ const id: Dictionary = {
   "match.dateTime": "Tanggal & Waktu",
   "match.dontMiss": "Jangan lewatkan kesempatan menyaksikan sejarah sepak bola secara langsung!",
   "match.secureCta": "Amankan Pengalaman Legendaris Anda",
+  "match.venue": "Lokasi",
+  "match.venueDesc": "Stadion terbesar di Indonesia dengan kapasitas 77.000 penonton, saksi momen tak terlupakan. Dari Asian Games hingga konser kelas dunia, kini menjadi panggung untuk laga para legenda sepak bola.",
+  "match.highlights": "Sorotan Acara",
+  "match.moreSoon": "Lebih banyak legenda akan diumumkan segera!",
 
   "articles.latest": "ARTIKEL TERBARU",
   "articles.stayUpdated": "Tetap terupdate dengan berita dan wawasan terbaru",

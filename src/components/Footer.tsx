@@ -66,33 +66,24 @@ const Footer = () => {
             </nav>
           </div>
 
-          {/* Contact Info */}
+          {/* Contact Info (customized) */}
           <div>
             <h4 className="text-white font-semibold text-lg mb-6">Contact Info</h4>
-            <div className="space-y-4">
-              <div className="flex items-start space-x-3">
-                <span className="text-yellow-400 text-lg">📧</span>
-                <div>
-                  <p className="text-white/70 text-sm">{t('footer.email')}</p>
-                  <a 
-                    href="mailto:tickets@clashoflegends.com"
-                    className="text-yellow-400 hover:text-yellow-300 transition-colors"
-                  >
-                    tickets@clashoflegends.com
-                  </a>
-                </div>
+            <div className="space-y-6">
+              <div>
+                <h5 className="text-white font-semibold mb-1">Ticket/Order Help</h5>
+                <p className="text-white/70 text-sm">For ticketing help, you can email here</p>
+                <a href="mailto:support@megatix.co.id" className="text-yellow-400 hover:text-yellow-300 transition-colors">support@megatix.co.id</a>
               </div>
-              <div className="flex items-start space-x-3">
-                <span className="text-yellow-400 text-lg">📞</span>
-                <div>
-                  <p className="text-white/70 text-sm">{t('footer.phone')}</p>
-                  <a 
-                    href="tel:+34912345678"
-                    className="text-yellow-400 hover:text-yellow-300 transition-colors"
-                  >
-                    +34 91 234 5678
-                  </a>
-                </div>
+              <div>
+                <h5 className="text-white font-semibold mb-1">Sponsor Inquiries</h5>
+                <p className="text-white/70 text-sm">For sponsor inquiries, you can email here</p>
+                <a href="mailto:sponsor@clashoflegends.id" className="text-yellow-400 hover:text-yellow-300 transition-colors">sponsor@clashoflegends.id</a>
+              </div>
+              <div>
+                <h5 className="text-white font-semibold mb-1">Event Information</h5>
+                <p className="text-white/70 text-sm">For event information, you can email here</p>
+                <a href="mailto:info@clashoflegends.id" className="text-yellow-400 hover:text-yellow-300 transition-colors">info@clashoflegends.id</a>
               </div>
             </div>
           </div>

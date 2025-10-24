@@ -33,7 +33,7 @@ const MatchInfoSection = () => {
 
   const { t } = useLanguage();
   return (
-    <section className="py-20 px-4">
+    <section id="about" className="py-20 px-4">
       <div className="container mx-auto">
         {/* Title */}
         <div className="text-center mb-16">
@@ -94,13 +94,9 @@ const MatchInfoSection = () => {
                     <span className="text-white text-xl">📍</span>
                   </div>
                   <div>
-                    <h4 className="text-white font-bold text-lg mb-2">Venue</h4>
+                    <h4 className="text-white font-bold text-lg mb-2">{t('match.venue')}</h4>
                     <p className="text-orange-300 font-medium mb-3">🏟️ Gelora Bung Karno Stadium, Jakarta</p>
-                    <p className="text-white/80 text-sm leading-relaxed">
-                      Indonesia&apos;s largest stadium, seating 77,000 fans, and home to unforgettable moments. 
-                      From the Asian Games to world-class concerts, it now sets the stage for the ultimate 
-                      football legends clash.
-                    </p>
+                    <p className="text-white/80 text-sm leading-relaxed">{t('match.venueDesc')}</p>
                   </div>
                 </div>
               </div>
@@ -112,7 +108,7 @@ const MatchInfoSection = () => {
                 <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center">
                   <span className="text-white text-xl">🔥</span>
                 </div>
-                <h3 className="text-2xl font-bold text-white">Event Highlights</h3>
+                <h3 className="text-2xl font-bold text-white">{t('match.highlights')}</h3>
               </div>
 
               <div className="mb-8">
@@ -136,7 +132,7 @@ const MatchInfoSection = () => {
                     </div>
                   ))}
                 </div>
-                  <p className="text-white/60 text-sm text-center mb-4">{t('articles.stayUpdated')}</p>
+                <p className="text-white/60 text-sm text-center mb-4">{t('match.moreSoon')}</p>
                 <div className="text-right">
                   <span className="bg-gradient-to-r from-red-500 to-pink-500 text-white text-xs px-3 py-1 rounded-full">
                     10th Historic Meeting
