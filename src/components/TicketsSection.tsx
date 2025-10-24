@@ -1,3 +1,4 @@
+"use client";
 // Image import removed; seating map removed
 import { useLanguage } from "@/contexts/LanguageContext";
 

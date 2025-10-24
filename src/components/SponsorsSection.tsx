@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import logos from "@/data/logos.json";
 import { useLanguage } from "@/contexts/LanguageContext";
