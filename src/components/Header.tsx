@@ -50,9 +50,9 @@ const Header = () => {
                 ID
               </button>
             </div>
-            <button className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-2 rounded-full font-semibold hover:from-yellow-500 hover:to-orange-600 transition-all transform hover:scale-105">
+            <a href="https://megatix.co.id/events/clash-of-legends" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-2 rounded-full font-semibold hover:from-yellow-500 hover:to-orange-600 transition-all transform hover:scale-105">
               Get Your Tickets
-            </button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -85,9 +85,9 @@ const Header = () => {
               <Link href="#partners" className="text-white hover:text-yellow-400 transition-colors">
                 Partners
               </Link>
-              <button className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-2 rounded-full font-semibold w-full mt-4">
+              <a href="https://megatix.co.id/events/clash-of-legends" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-2 rounded-full font-semibold w-full mt-4">
                 Get Your Tickets
-              </button>
+              </a>
             </nav>
           </div>
         )}

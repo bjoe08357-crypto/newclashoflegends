@@ -158,9 +158,9 @@ const MatchInfoSection = () => {
               <p className="text-yellow-400 font-bold text-lg mb-4">
                 ⚠️ Don&apos;t miss your chance to witness football history live!
               </p>
-              <button className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold px-8 py-4 rounded-full text-lg hover:from-yellow-500 hover:to-orange-600 transition-all transform hover:scale-105 shadow-2xl">
+              <a href="https://megatix.co.id/events/clash-of-legends" target="_blank" rel="noopener noreferrer" className="inline-block bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold px-8 py-4 rounded-full text-lg hover:from-yellow-500 hover:to-orange-600 transition-all transform hover:scale-105 shadow-2xl">
                 👑 Secure Your Legendary Experience
-              </button>
+              </a>
             </div>
           </div>
         </div>

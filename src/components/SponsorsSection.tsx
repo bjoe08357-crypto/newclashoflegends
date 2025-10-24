@@ -6,7 +6,7 @@ const LogoRow = ({ items, size = 64, max }: { items: string[]; size?: number; ma
   return (
     <div className="flex justify-center items-center gap-6 flex-wrap">
       {sources.map((src, idx) => (
-        <div key={src + idx} className="bg-white/10 rounded-lg flex items-center justify-center" style={{ width: size, height: size }}>
+        <div key={src + idx} className="flex items-center justify-center" style={{ width: size, height: size }}>
           <Image src={src} alt="logo" width={size * 0.9} height={size * 0.9} className="object-contain" />
         </div>
       ))}
@@ -16,7 +16,7 @@ const LogoRow = ({ items, size = 64, max }: { items: string[]; size?: number; ma
 
 const SponsorsSection = () => {
   return (
-    <section className="py-12 bg-gradient-to-b from-slate-900 to-blue-900">
+    <section id="partners" className="py-12 bg-gradient-to-b from-slate-900 to-blue-900">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="mb-8">

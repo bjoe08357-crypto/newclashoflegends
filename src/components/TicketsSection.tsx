@@ -104,9 +104,9 @@ const TicketsSection = () => {
                   {ticket.price}
                 </div>
                 <p className="text-white/80 text-sm mb-6">*exclude tax</p>
-                <button className={`w-full ${ticket.buttonColor} text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105`}>
+                <a href="https://megatix.co.id/events/clash-of-legends" target="_blank" rel="noopener noreferrer" className={`w-full inline-block text-center ${ticket.buttonColor} text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105`}>
                   Get Your Tickets
-                </button>
+                </a>
               </div>
             ))}
           </div>
@@ -115,7 +115,9 @@ const TicketsSection = () => {
         {/* Terms & Conditions */}
         <div className="text-center">
           <a
-            href="#"
+            href="https://megatix.co.id/events/clash-of-legends"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-yellow-400 hover:text-yellow-300 underline transition-colors"
           >
             Terms & Conditions

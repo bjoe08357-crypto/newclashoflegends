@@ -132,9 +132,9 @@ const ArticlesSection = () => {
 
         {/* View More Button */}
         <div className="text-center mt-12">
-          <button className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold px-8 py-4 rounded-full hover:from-yellow-500 hover:to-orange-600 transition-all transform hover:scale-105">
+          <a href="#articles" className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold px-8 py-4 rounded-full hover:from-yellow-500 hover:to-orange-600 transition-all transform hover:scale-105">
             View All Articles
-          </button>
+          </a>
         </div>
       </div>
     </section>
