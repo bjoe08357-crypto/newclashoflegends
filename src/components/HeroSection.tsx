@@ -15,7 +15,7 @@ const HeroSection = () => {
         />
         {/* Mobile Image */}
         <Image
-          src="/images/hero.jpeg"
+          src="/images/hero-mobile.jpeg"
           alt="Clash of Legends banner"
           fill
           className="object-contain object-center block md:hidden"
