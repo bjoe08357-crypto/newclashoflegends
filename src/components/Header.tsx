@@ -79,6 +79,10 @@ const Header = () => {
               <Link href="#about" className="text-white hover:text-yellow-400 transition-colors">{t('match.matchInfo')}</Link>
               <Link href="#players" className="text-white hover:text-yellow-400 transition-colors">Players</Link>
               <Link href="#tickets" className="text-white hover:text-yellow-400 transition-colors">{t('nav.tickets')}</Link>
+              <div className="flex items-center space-x-2 pt-2">
+                <button onClick={() => setLanguage('en')} className={`px-3 py-1 rounded-full text-sm font-medium ${lang==='en' ? 'text-black bg-yellow-400' : 'text-white/70 bg-white/10'}`}>EN</button>
+                <button onClick={() => setLanguage('id')} className={`px-3 py-1 rounded-full text-sm font-medium ${lang==='id' ? 'text-black bg-yellow-400' : 'text-white/70 bg-white/10'}`}>ID</button>
+              </div>
               <div className="flex items-center space-x-4 pt-2">
                 <a href="https://www.instagram.com/clashoflegends.id/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><img src="/logos/instagram.avif" alt="Instagram" className="w-5 h-5 object-contain" /></a>
                 <a href="https://x.com/ClashLegendsid" target="_blank" rel="noopener noreferrer" aria-label="X"><img src="/logos/x.avif" alt="X" className="w-5 h-5 object-contain" /></a>

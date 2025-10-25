@@ -24,28 +24,28 @@ const SponsorsSection = () => {
         <div className="max-w-6xl mx-auto">
           <div className="mb-8">
             <p className="text-center text-white/60 text-sm mb-4">{t('sponsors.organizedBy')}</p>
-            <LogoRow items={logos.organizedBy} size={64} max={4} />
+            <LogoRow items={logos.organizedBy} size={80} max={4} />
           </div>
 
           <div className="mb-8">
             <p className="text-center text-white/60 text-sm mb-4">{t('sponsors.sponsoredBy')}</p>
-            <LogoRow items={logos.sponsoredBy} size={72} />
+            <LogoRow items={logos.sponsoredBy} size={88} />
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             <div>
               <p className="text-center text-white/60 text-sm mb-4">{t('sponsors.communityPartner')}</p>
-              <LogoRow items={logos.communityPartner} size={48} />
+              <LogoRow items={logos.communityPartner} size={64} />
             </div>
             
             <div>
               <p className="text-center text-white/60 text-sm mb-4">{t('sponsors.supportingPartner')}</p>
-              <LogoRow items={logos.supportingPartner} size={48} />
+              <LogoRow items={logos.supportingPartner} size={64} />
             </div>
             
             <div>
               <p className="text-center text-white/60 text-sm mb-4">{t('sponsors.ticketingPartner')}</p>
-              <LogoRow items={logos.ticketingPartner} size={56} />
+              <LogoRow items={logos.ticketingPartner} size={72} />
             </div>
           </div>
         </div>
