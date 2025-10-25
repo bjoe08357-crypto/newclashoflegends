@@ -18,7 +18,7 @@ const HeroSection = () => {
           src="/images/hero-mobile.jpeg"
           alt="Clash of Legends banner"
           fill
-          className="object-cover object-center block md:hidden"
+          className="object-cover object-center block md:hidden origin-center scale-95 md:scale-100"
           priority
         />
       </div>
