@@ -18,9 +18,9 @@ export const metadata: Metadata = {
   title: "Clash Of Legends",
   description: "Clash Of Legends — Real Madrid Legends vs Barça Legends at GBK Stadium.",
   icons: {
-    icon: "/logo.avif",
-    shortcut: "/logo.avif",
-    apple: "/logo.avif",
+    icon: "/clash-of-legends-logo.avif",
+    shortcut: "/clash-of-legends-logo.avif",
+    apple: "/clash-of-legends-logo.avif",
   },
 };
 
