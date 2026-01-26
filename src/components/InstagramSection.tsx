@@ -24,19 +24,14 @@ const InstagramSection = () => {
           <div className="bg-gradient-to-br from-slate-900/50 to-slate-950/50 border border-white/10 rounded-3xl p-6 md:p-8">
             <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-8 items-start">
               <div className="w-full">
-                <div className="aspect-[4/5] w-full overflow-hidden rounded-2xl border border-white/10 bg-black/40">
+                <div className="w-full overflow-hidden rounded-2xl border border-white/10 bg-slate-950/60">
                   <iframe
                     title="Clash of Legends Instagram"
                     src="https://www.instagram.com/clashoflegends.id/embed"
-                    className="w-full h-full"
+                    className="w-full h-[560px] md:h-[640px]"
                     loading="lazy"
                   />
                 </div>
-                <p className="text-white/50 text-xs mt-3">
-                  {lang === "id"
-                    ? "Jika embed tidak tampil, gunakan tombol di samping untuk membuka profil."
-                    : "If the embed does not load, use the button to open the profile."}
-                </p>
               </div>
 
               <div className="space-y-4">
@@ -57,13 +52,6 @@ const InstagramSection = () => {
                   </a>
                 </div>
 
-                <div className="bg-slate-950/60 border border-white/10 rounded-2xl p-5">
-                  <p className="text-white/70 text-sm">
-                    {lang === "id"
-                      ? "Untuk feed per-post, kirimkan URL posting Instagram dan kami akan sematkan di sini."
-                      : "For a per-post feed, share Instagram post URLs and we will embed them here."}
-                  </p>
-                </div>
               </div>
             </div>
           </div>
