@@ -3,7 +3,16 @@
 import { useMemo } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-const events = [
+type EventItem = {
+  id: number;
+  title: string;
+  date: string;
+  time: string;
+  location: string;
+  description: string;
+};
+
+const events: EventItem[] = [
   {
     id: 1,
     title: "Press Conference Clash of Legends",
@@ -50,8 +59,8 @@ const EventsSection = () => {
   }, []);
 
   const { upcoming, past } = useMemo(() => {
-    const upcomingEvents = [];
-    const pastEvents = [];
+    const upcomingEvents: EventItem[] = [];
+    const pastEvents: EventItem[] = [];
     events.forEach((event) => {
       const eventDate = new Date(`${event.date}T00:00:00+07:00`);
       if (eventDate >= today) {
