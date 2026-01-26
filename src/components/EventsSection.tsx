@@ -63,7 +63,7 @@ const EventsSection = () => {
     upcomingEvents.sort((a, b) => a.date.localeCompare(b.date));
     pastEvents.sort((a, b) => b.date.localeCompare(a.date));
     return { upcoming: upcomingEvents, past: pastEvents };
-  }, [events, today]);
+  }, [today]);
 
   return (
     <section id="calendar" className="py-20 px-4">

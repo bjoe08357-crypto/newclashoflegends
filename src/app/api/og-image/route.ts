@@ -43,7 +43,7 @@ export async function GET(request: Request) {
 
   if (cache.has(targetUrl)) {
     const cached = cache.get(targetUrl) as CachedImage;
-    return new Response(cached.buffer, {
+    return new Response(new Uint8Array(cached.buffer), {
       headers: {
         "Content-Type": cached.contentType,
         "Cache-Control": "public, max-age=3600"
