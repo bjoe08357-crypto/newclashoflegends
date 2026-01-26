@@ -7,7 +7,7 @@ const cache = new Map<string, CachedImage>();
 async function getFallbackImage() {
   const fallbackPath = path.join(process.cwd(), "public", "images", "GBK.png");
   const buffer = await readFile(fallbackPath);
-  return new Response(buffer, {
+  return new Response(new Uint8Array(buffer), {
     headers: {
       "Content-Type": "image/png",
       "Cache-Control": "public, max-age=3600"
@@ -82,7 +82,7 @@ export async function GET(request: Request) {
     const buffer = Buffer.from(await imageResponse.arrayBuffer());
     cache.set(targetUrl, { contentType, buffer });
 
-    return new Response(buffer, {
+    return new Response(new Uint8Array(buffer), {
       headers: {
         "Content-Type": contentType,
         "Cache-Control": "public, max-age=3600"
