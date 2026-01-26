@@ -31,7 +31,15 @@ const Header = () => {
             <Link href="#tickets" className="text-white hover:text-yellow-400 transition-colors font-medium">
               {t('nav.tickets')}
             </Link>
-            {/* Articles link hidden */}
+            <Link href="#articles" className="text-white hover:text-yellow-400 transition-colors font-medium">
+              {t('nav.articles')}
+            </Link>
+            <Link href="#calendar" className="text-white hover:text-yellow-400 transition-colors font-medium">
+              {t('nav.calendar')}
+            </Link>
+            <Link href="#instagram" className="text-white hover:text-yellow-400 transition-colors font-medium">
+              {t('nav.instagram')}
+            </Link>
           </nav>
 
           {/* Socials + Language & CTA */}
@@ -79,6 +87,9 @@ const Header = () => {
               <Link href="#about" className="text-white hover:text-yellow-400 transition-colors">{t('match.matchInfo')}</Link>
               <Link href="#players" className="text-white hover:text-yellow-400 transition-colors">Players</Link>
               <Link href="#tickets" className="text-white hover:text-yellow-400 transition-colors">{t('nav.tickets')}</Link>
+              <Link href="#articles" className="text-white hover:text-yellow-400 transition-colors">{t('nav.articles')}</Link>
+              <Link href="#calendar" className="text-white hover:text-yellow-400 transition-colors">{t('nav.calendar')}</Link>
+              <Link href="#instagram" className="text-white hover:text-yellow-400 transition-colors">{t('nav.instagram')}</Link>
               <div className="flex items-center space-x-2 pt-2">
                 <button onClick={() => setLanguage('en')} className={`px-3 py-1 rounded-full text-sm font-medium ${lang==='en' ? 'text-black bg-yellow-400' : 'text-white/70 bg-white/10'}`}>EN</button>
                 <button onClick={() => setLanguage('id')} className={`px-3 py-1 rounded-full text-sm font-medium ${lang==='id' ? 'text-black bg-yellow-400' : 'text-white/70 bg-white/10'}`}>ID</button>

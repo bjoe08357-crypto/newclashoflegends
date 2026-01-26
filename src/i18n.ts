@@ -8,6 +8,8 @@ const en: Dictionary = {
   "nav.home": "Home",
   "nav.tickets": "Tickets",
   "nav.articles": "Articles",
+  "nav.calendar": "Calendar",
+  "nav.instagram": "Instagram",
   "nav.partners": "Partners",
 
   "header.getTickets": "Get Your Tickets",
@@ -62,6 +64,8 @@ const id: Dictionary = {
   "nav.home": "Beranda",
   "nav.tickets": "Tiket",
   "nav.articles": "Artikel",
+  "nav.calendar": "Kalender",
+  "nav.instagram": "Instagram",
   "nav.partners": "Mitra",
 
   "header.getTickets": "Beli Tiket",

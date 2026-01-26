@@ -4,7 +4,9 @@ import SponsorsSection from "@/components/SponsorsSection";
 import TicketsSection from "@/components/TicketsSection";
 import MatchInfoSection from "@/components/MatchInfoSection";
 import LegendaryPlayersSection from "@/components/LegendaryPlayersSection";
-// import ArticlesSection from "@/components/ArticlesSection";
+import ArticlesSection from "@/components/ArticlesSection";
+import EventsSection from "@/components/EventsSection";
+import InstagramSection from "@/components/InstagramSection";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -17,7 +19,9 @@ export default function Home() {
         <TicketsSection />
         <MatchInfoSection />
         <LegendaryPlayersSection />
-        {/* <ArticlesSection /> */}
+        <ArticlesSection />
+        <EventsSection />
+        <InstagramSection />
       </main>
       <Footer />
     </div>
