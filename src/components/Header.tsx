@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { useLanguage } from "@/contexts/LanguageContext";
 import Link from "next/link";
 
@@ -14,7 +15,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo (click to home) */}
           <Link href="#home" className="flex items-center">
-            <img src="/logo.avif" alt="Clash Of Legends" className="w-14 h-14 object-contain" />
+            <Image src="/logo.avif" alt="Clash Of Legends" width={56} height={56} className="object-contain" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -46,13 +47,13 @@ const Header = () => {
           <div className="hidden md:flex items-center space-x-4">
             <div className="hidden md:flex items-center space-x-3 mr-2">
               <a href="https://www.instagram.com/clashoflegends.id/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                <img src="/logos/instagram.avif" alt="Instagram" className="w-5 h-5 object-contain" />
+                <Image src="/logos/instagram.avif" alt="Instagram" width={20} height={20} className="object-contain" />
               </a>
               <a href="https://x.com/ClashLegendsid" target="_blank" rel="noopener noreferrer" aria-label="X">
-                <img src="/logos/x.avif" alt="X" className="w-5 h-5 object-contain" />
+                <Image src="/logos/x.avif" alt="X" width={20} height={20} className="object-contain" />
               </a>
               <a href="https://www.tiktok.com/@clashoflegends.id" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-                <img src="/logos/tiktok.avif" alt="TikTok" className="w-5 h-5 object-contain" />
+                <Image src="/logos/tiktok.avif" alt="TikTok" width={20} height={20} className="object-contain" />
               </a>
             </div>
             <div className="flex items-center space-x-2">
@@ -95,9 +96,15 @@ const Header = () => {
                 <button onClick={() => setLanguage('id')} className={`px-3 py-1 rounded-full text-sm font-medium ${lang==='id' ? 'text-black bg-yellow-400' : 'text-white/70 bg-white/10'}`}>ID</button>
               </div>
               <div className="flex items-center space-x-4 pt-2">
-                <a href="https://www.instagram.com/clashoflegends.id/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><img src="/logos/instagram.avif" alt="Instagram" className="w-5 h-5 object-contain" /></a>
-                <a href="https://x.com/ClashLegendsid" target="_blank" rel="noopener noreferrer" aria-label="X"><img src="/logos/x.avif" alt="X" className="w-5 h-5 object-contain" /></a>
-                <a href="https://www.tiktok.com/@clashoflegends.id" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><img src="/logos/tiktok.avif" alt="TikTok" className="w-5 h-5 object-contain" /></a>
+                <a href="https://www.instagram.com/clashoflegends.id/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                  <Image src="/logos/instagram.avif" alt="Instagram" width={20} height={20} className="object-contain" />
+                </a>
+                <a href="https://x.com/ClashLegendsid" target="_blank" rel="noopener noreferrer" aria-label="X">
+                  <Image src="/logos/x.avif" alt="X" width={20} height={20} className="object-contain" />
+                </a>
+                <a href="https://www.tiktok.com/@clashoflegends.id" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                  <Image src="/logos/tiktok.avif" alt="TikTok" width={20} height={20} className="object-contain" />
+                </a>
               </div>
               <a href="https://megatix.co.id/events/clash-of-legends" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-2 rounded-full font-semibold w-full mt-4">{t('header.getTickets')}</a>
             </nav>

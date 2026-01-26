@@ -3,35 +3,35 @@
 import { useMemo } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
+const events = [
+  {
+    id: 1,
+    title: "Press Conference Clash of Legends",
+    date: "2026-01-12",
+    time: "10:00 WIB",
+    location: "Balai Kota Jakarta",
+    description: "Konferensi pers resmi dan pengumuman gelaran Clash of Legends Jakarta."
+  },
+  {
+    id: 2,
+    title: "Ticket Sales Open",
+    date: "2026-01-14",
+    time: "12:00 WIB",
+    location: "Megatix (Online)",
+    description: "Penjualan tiket resmi dibuka untuk publik."
+  },
+  {
+    id: 3,
+    title: "Clash of Legends Jakarta",
+    date: "2026-04-18",
+    time: "16:00 WIB",
+    location: "Gelora Bung Karno Stadium, Jakarta",
+    description: "Real Madrid Legends vs Barca Legends."
+  }
+];
+
 const EventsSection = () => {
   const { lang } = useLanguage();
-
-  const events = [
-    {
-      id: 1,
-      title: "Press Conference Clash of Legends",
-      date: "2026-01-12",
-      time: "10:00 WIB",
-      location: "Balai Kota Jakarta",
-      description: "Konferensi pers resmi dan pengumuman gelaran Clash of Legends Jakarta."
-    },
-    {
-      id: 2,
-      title: "Ticket Sales Open",
-      date: "2026-01-14",
-      time: "12:00 WIB",
-      location: "Megatix (Online)",
-      description: "Penjualan tiket resmi dibuka untuk publik."
-    },
-    {
-      id: 3,
-      title: "Clash of Legends Jakarta",
-      date: "2026-04-18",
-      time: "16:00 WIB",
-      location: "Gelora Bung Karno Stadium, Jakarta",
-      description: "Real Madrid Legends vs Barca Legends."
-    }
-  ];
 
   const formatter = useMemo(
     () =>

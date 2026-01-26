@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { articles } from "@/data/articles";
@@ -64,16 +65,13 @@ const ArticlesPage = () => {
                       className="group bg-gradient-to-br from-slate-900/50 to-slate-950/50 border border-white/10 rounded-2xl overflow-hidden hover:border-yellow-400/50 transition-all duration-300"
                     >
                       <div className="relative h-40">
-                        <img
+                        <Image
                           src={article.image}
                           alt={article.title}
-                          className="h-full w-full object-cover"
-                          loading="lazy"
-                          onError={(event) => {
-                            const target = event.currentTarget;
-                            target.onerror = null;
-                            target.src = "/images/GBK.png";
-                          }}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          unoptimized
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
                       </div>

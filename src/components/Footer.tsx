@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -43,7 +44,7 @@ const Footer = () => {
                     aria-label={social.name}
                     className="w-12 h-12 bg-gradient-to-br from-yellow-600/20 to-orange-600/20 rounded-full flex items-center justify-center hover:from-yellow-400 hover:to-orange-500 transition-all transform hover:scale-110"
                   >
-                    <img src={social.icon} alt={social.name} className="w-6 h-6 object-contain" />
+                    <Image src={social.icon} alt={social.name} width={24} height={24} className="object-contain" />
                   </a>
                 ))}
               </div>
@@ -109,7 +110,7 @@ const Footer = () => {
               © 2025 Clash Of Legends. All rights reserved.
             </p>
             <a href="https://drxtoken.com" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 mt-4 md:mt-0 text-white/70 hover:text-white transition-colors">
-              <img src="/logos/drx.avif" alt="DRX" className="w-6 h-6 object-contain" />
+              <Image src="/logos/drx.avif" alt="DRX" width={24} height={24} className="object-contain" />
               <span className="text-sm">Powered by DRX</span>
             </a>
           </div>

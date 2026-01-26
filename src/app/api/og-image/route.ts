@@ -88,7 +88,7 @@ export async function GET(request: Request) {
         "Cache-Control": "public, max-age=3600"
       }
     });
-  } catch (error) {
+  } catch {
     return await getFallbackImage();
   }
 }

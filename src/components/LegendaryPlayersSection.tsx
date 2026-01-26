@@ -1,23 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import Image from "next/image";
 
 const LegendaryPlayersSection = () => {
-  const [selectedTeam, setSelectedTeam] = useState<'real' | 'barca'>('real');
-
-  const realMadridPlayers = [
-    { name: "PEPÉ", position: "Defender", image: "/images/pepe.png", team: "Real Madrid" },
-    { name: "FIGO", position: "Winger", image: "/images/figo.png", team: "Real Madrid" }
-  ];
-
-  const barcelonaPlayers = [
-    { name: "PUYOL", position: "Defender", image: "/images/puyol.png", team: "Barcelona" },
-    { name: "RIVALDO", position: "Forward", image: "/images/rivaldo.png", team: "Barcelona" }
-  ];
-
-  const currentPlayers = selectedTeam === 'real' ? realMadridPlayers : barcelonaPlayers;
-
   return (
     <section id="players" className="py-20 px-4 bg-gradient-to-b from-slate-900 to-blue-900">
       <div className="container mx-auto">
