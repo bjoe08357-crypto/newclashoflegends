@@ -260,7 +260,14 @@ const rawArticles = [
   }
 ];
 
+const customImages: Record<string, string> = {
+  "https://tirto.id/link-beli-tiket-clash-of-legends-barca-vs-madrid-daftar-harga-hpdi":
+    "/images/clash-of-legends-madrid-vs-barca_ratio-16x9.webp",
+  "https://www.edisi.co.id/berita/amp/9716556881/gubernur-pramono-dukung-penuh-clash-of-legends-2026-real-madrid-vs-barcelona-hadir-di-gbk":
+    "/images/clas-1579024584.webp"
+};
+
 export const articles: Article[] = rawArticles.map((article) => ({
   ...article,
-  image: buildImageUrl(article.url)
+  image: customImages[article.url] ?? buildImageUrl(article.url)
 }));
