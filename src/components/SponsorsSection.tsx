@@ -9,7 +9,15 @@ const SponsorsSection = () => {
           alt="Sponsors and Partners"
           width={8000}
           height={2263}
-          className="w-full h-auto"
+          className="w-full h-auto hidden md:block"
+          priority
+        />
+        <Image
+          src="/images/sponsors-mobile.png"
+          alt="Sponsors and Partners"
+          width={1200}
+          height={1500}
+          className="w-full h-auto block md:hidden"
           priority
         />
       </div>
