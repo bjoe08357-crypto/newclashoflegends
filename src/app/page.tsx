@@ -11,16 +11,22 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-900 via-blue-900 to-slate-900">
+    <div className="min-h-screen bg-[#050505] relative">
       <Header />
       <main>
         <HeroSection />
         <SponsorsSection />
+        <div className="section-divider" />
         <TicketsSection />
+        <div className="section-divider" />
         <MatchInfoSection />
+        <div className="section-divider" />
         <LegendaryPlayersSection />
+        <div className="section-divider" />
         <ArticlesSection />
+        <div className="section-divider" />
         <EventsSection />
+        <div className="section-divider" />
         <InstagramSection />
       </main>
       <Footer />

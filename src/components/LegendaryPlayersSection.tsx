@@ -3,85 +3,54 @@
 import Image from "next/image";
 
 const LegendaryPlayersSection = () => {
-  return (
-    <section id="players" className="py-20 px-4 bg-gradient-to-b from-slate-900 to-blue-900">
-      <div className="container mx-auto">
+  const players = [
+    { src: "/images/ronaldo-r9.png", name: "Ronaldo R9", team: "Real Madrid" },
+    { src: "/images/puyol.png", name: "Puyol", team: "Barcelona" },
+    { src: "/images/franck-ribery.png", name: "Franck Ribéry", team: "Barcelona" },
+    { src: "/images/rivaldo.png", name: "Rivaldo", team: "Barcelona" },
+  ];
 
-        {/* Title */}
+  return (
+    <section id="players" className="relative py-24 px-4 overflow-hidden">
+      {/* Ambient glow */}
+      <div className="glow-blob glow-blob-gold w-[600px] h-[600px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+
+      <div className="container mx-auto relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h2 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight" style={{ fontFamily: 'var(--font-display)' }}>
             LEGENDARY PLAYERS
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-orange-500 mx-auto mb-8"></div>
-          <p className="text-xl text-white/80 max-w-3xl mx-auto">
+          <p className="text-xl text-white/60 max-w-3xl mx-auto">
             Witness the return of football&apos;s greatest icons in the ultimate arena face-off
           </p>
         </div>
 
-        {/* Player Cards Grid (centered) */}
         <div className="max-w-7xl mx-auto mb-12">
           <div className="flex flex-wrap justify-center gap-6">
-            {/* Pepé Card */}
-            <div className="w-64 group relative">
-              <div className="rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 shadow-2xl">
-                <div className="relative w-64 h-[436px]">
-                  <Image
-                    src="/images/pepe.png"
-                    alt="Pepé - Real Madrid Legend"
-                    fill
-                    className="object-cover object-center"
-                  />
+            {players.map((player, i) => (
+              <div key={i} className="w-64 group relative">
+                <div className="card-glow rounded-2xl overflow-hidden transform transition-all duration-500 hover:scale-105 border border-white/10 hover:border-yellow-500/40">
+                  <div className="relative w-64 h-[436px]">
+                    <Image
+                      src={player.src}
+                      alt={`${player.name} - ${player.team} Legend`}
+                      fill
+                      className="object-cover object-center"
+                    />
+                    {/* Name overlay on hover */}
+                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                      <p className="text-white font-bold text-lg" style={{ fontFamily: 'var(--font-display)' }}>
+                        {player.name}
+                      </p>
+                      <p className="text-yellow-400 text-sm">{player.team}</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-
-            {/* Puyol Card - Featured */}
-            <div className="w-64 group relative">
-              <div className="rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 shadow-2xl">
-                <div className="relative w-64 h-[436px]">
-                  <Image
-                    src="/images/puyol.png"
-                    alt="Puyol - Barcelona Legend"
-                    fill
-                    className="object-cover object-center"
-                  />
-                </div>
-              </div>
-            </div>
-
-            {/* Milla Card */}
-            <div className="w-64 group relative">
-              <div className="rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 shadow-2xl">
-                <div className="relative w-64 h-[436px]">
-                  <Image
-                    src="/images/figo.png"
-                    alt="Milla - Real Madrid Legend"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-            </div>
-
-            {/* Xavi Card */}
-            <div className="w-64 group relative">
-              <div className="rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 shadow-2xl">
-                <div className="relative w-64 h-[436px]">
-                  <Image
-                    src="/images/rivaldo.png"
-                    alt="Xavi - Barcelona Legend"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
-
-          {/* Navigation Arrows removed */}
         </div>
-
-        {/* Team selector removed per request */}
       </div>
     </section>
   );

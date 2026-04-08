@@ -6,14 +6,16 @@ const InstagramSection = () => {
   const { lang } = useLanguage();
 
   return (
-    <section id="instagram" className="py-20 px-4">
-      <div className="container mx-auto">
+    <section id="instagram" className="relative py-24 px-4 overflow-hidden">
+      <div className="glow-blob glow-blob-amber w-[400px] h-[300px] top-10 -right-20" />
+
+      <div className="container mx-auto relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h2 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight" style={{ fontFamily: 'var(--font-display)' }}>
             {lang === "id" ? "INSTAGRAM" : "INSTAGRAM FEED"}
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-orange-500 mx-auto mb-6"></div>
-          <p className="text-xl text-white/80 max-w-3xl mx-auto">
+          <p className="text-xl text-white/60 max-w-3xl mx-auto">
             {lang === "id"
               ? "Ikuti pembaruan terbaru dari Clash of Legends Jakarta."
               : "Follow the latest updates from Clash of Legends Jakarta."}
@@ -21,10 +23,10 @@ const InstagramSection = () => {
         </div>
 
         <div className="max-w-5xl mx-auto">
-          <div className="bg-gradient-to-br from-slate-900/50 to-slate-950/50 border border-white/10 rounded-3xl p-6 md:p-8">
+          <div className="shimmer-border bg-white/[0.03] border border-white/10 rounded-3xl p-6 md:p-8">
             <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-8 items-start">
               <div className="w-full">
-                <div className="w-full overflow-hidden rounded-2xl border border-white/10 bg-slate-950/60">
+                <div className="w-full overflow-hidden rounded-2xl border border-white/10 bg-black/50">
                   <iframe
                     title="Clash of Legends Instagram"
                     src="https://www.instagram.com/clashoflegends.id/embed"
@@ -35,9 +37,9 @@ const InstagramSection = () => {
               </div>
 
               <div className="space-y-4">
-                <div className="bg-slate-950/60 border border-white/10 rounded-2xl p-5">
+                <div className="bg-white/[0.03] border border-white/10 rounded-2xl p-5">
                   <h3 className="text-white font-semibold text-xl mb-2">@clashoflegends.id</h3>
-                  <p className="text-white/70 text-sm mb-4">
+                  <p className="text-white/50 text-sm mb-4">
                     {lang === "id"
                       ? "Konten terbaru, pengumuman lineup, dan cuplikan pertandingan."
                       : "Latest content, lineup announcements, and match highlights."}
@@ -46,12 +48,11 @@ const InstagramSection = () => {
                     href="https://www.instagram.com/clashoflegends.id/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center w-full bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold px-6 py-3 rounded-full hover:from-yellow-500 hover:to-orange-600 transition-all"
+                    className="inline-flex items-center justify-center w-full bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold px-6 py-3 rounded-full hover:from-yellow-500 hover:to-orange-600 transition-all shadow-[0_0_20px_rgba(245,158,11,0.2)]"
                   >
                     {lang === "id" ? "Buka Instagram" : "Open Instagram"}
                   </a>
                 </div>
-
               </div>
             </div>
           </div>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Oswald } from "next/font/google";
 import "./globals.css";
 import { SupportedLanguage } from "@/i18n";
 import { LanguageProvider } from "@/contexts/LanguageContext";
@@ -14,13 +14,22 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const oswald = Oswald({
+  variable: "--font-display",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
 export const metadata: Metadata = {
   title: "Clash Of Legends",
   description: "Clash Of Legends — Real Madrid Legends vs Barça Legends at GBK Stadium.",
   icons: {
-    icon: "/clashfav.ico",
-    shortcut: "/clashfav.ico",
-    apple: "/clashfav.ico",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.png", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
 };
 
@@ -34,7 +43,7 @@ export default function RootLayout({
   return (
     <html lang={lang}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${oswald.variable} antialiased noise-overlay`}
       >
         <LanguageProvider>
           {children}
