@@ -2,8 +2,8 @@ import Image from "next/image";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="relative h-screen flex items-end justify-center overflow-hidden mt-15 bg-black">
-      <div className="absolute inset-0">
+    <section id="home" className="relative h-auto md:h-screen flex items-end justify-center overflow-hidden mt-15 bg-black">
+      <div className="relative md:absolute md:inset-0">
         <Image
           src="/images/hero.jpeg"
           alt="Clash of Legends banner"
@@ -14,8 +14,9 @@ const HeroSection = () => {
         <Image
           src="/images/hero-mobile.jpeg"
           alt="Clash of Legends banner"
-          fill
-          className="object-cover object-top block md:hidden"
+          width={2401}
+          height={2400}
+          className="w-full h-auto block md:hidden"
           priority
         />
       </div>
