@@ -33,7 +33,7 @@ const events: EventItem[] = [
     id: 3,
     title: "Clash of Legends Jakarta",
     date: "2026-04-18",
-    time: "16:00 WIB",
+    time: "19:30 WIB",
     location: "Gelora Bung Karno Stadium, Jakarta",
     description: "Real Madrid Legends vs Barca Legends.",
   },

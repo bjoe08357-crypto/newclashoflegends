@@ -87,7 +87,7 @@ const MatchInfoSection = () => {
                     <div className="flex-1">
                       <h4 className="text-white font-bold text-xl mb-2">Date & Time</h4>
                       <p className="text-orange-300 font-semibold text-lg">
-                        📅 Saturday, 27 September 2025 — 4:00 PM
+                        📅 Saturday, 27 September 2025 — 7:30 PM
                       </p>
                       <p className="text-gray-400 text-sm mt-1">Jakarta Time (WIB)</p>
                     </div>
